@@ -1,0 +1,112 @@
+
+
+
+
+html, body {
+    font-family: "Exo 2","Helvetica Neue",Helvetica,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 5rem;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 2.5rem;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+h4 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 2rem;
+}
+
+
+.navbar-inverse {
+    color: white;
+}
+
+/*
+  Colors:
+orange: health
+  background: #F8951D;
+yellow: air
+    background: #F5C817;
+red: water and sanitation
+    background: #F36E2B;
+violet: water resources
+    background: #7D8FC8;
+navy: agriculture
+    background: #3175B9;
+blue: forests
+    background: #0B9BCC;
+pine: fisheries
+    background: #008C8C;
+cyan: biodiversity
+    background: #3CBCA3;
+green: climate
+    background: #2DB45D;
+*/
+
+
+.vis-legend:before {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    content: " ";
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-top: .5em;
+    margin-bottom: -7px;
+    background-color: black;
+}
+.vis-legend-o:before {
+    background: #F8951D;
+}
+.vis-legend-y:before {
+    background: #F5C817;
+}
+.vis-legend-r:before {
+    background: #F36E2B;
+}
+.vis-legend-v:before {
+    background: #7D8FC8;
+}
+.vis-legend-n:before {
+    background: #3175B9;
+}
+.vis-legend-b:before {
+    background: #0B9BCC;
+}
+.vis-legend-p:before {
+    background: #008C8C;
+}
+.vis-legend-c:before {
+    background: #3CBCA3;
+}
+.vis-legend-g:before {
+    background: #2DB45D;
+}
+
+img {
+    width: 100%;
+}    
+
+.vis-h-overflow {
+    overflow-x:auto;
+    overflow-y:none;
+    
+}
+
+.vis-min-width-640 {
+    min-width:640px;
+    height:auto;
+}

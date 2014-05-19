@@ -1,5 +1,7 @@
 //wrapping function - dsd
-function runViz() {
+//function runViz() {
+//window.onload=function(){
+$(document).ready(function(){ //jquery ~equivalent for window.onload
 
 var width = 350;
 var height = 350;
@@ -67,12 +69,14 @@ function drawgraphs(cs) {
     
     url = "";
     $.each(cs, function(i, d) {  
+        //url += "iso_codes[]="+d+"&";
         url += "iso_codes[]="+d+"&";
     });
     
     // JSON for radars and indicator list
-    d3.json("http://107.170.152.222/radar_chart.json?years[]=2012&"+url, function(error, json) {  
-        $("#maincontainer").empty();
+    d3.json("http://107.170.152.222/radar_chart.json?years[]=2012&"+url, function(error, json) {
+    //d3.json("http://107.170.152.222/radar_chart.json?years[]=2012&iso_codes[]=CHN&iso_codes[]=IND&iso_codes[]=USA&"+url, function(error, json) { //dsd test
+        $("#maincontainer").empty(); //dsd THIS seems to be related to the radar graph disappearing issue
         $.each(json[0], function(key, country2) {
             country = country2.data;
             
@@ -217,4 +221,4 @@ function mouseout() {
         .style("opacity", 1);
 }
 
-} //ends mega meta wrapper function
+}) //ends mega meta wrapper function
