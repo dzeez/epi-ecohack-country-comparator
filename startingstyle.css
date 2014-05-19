@@ -1,0 +1,69 @@
+body {
+    font-weight: bold;
+}
+
+#maincontainer {
+    width: 99%;
+    
+    border: 1px solid;
+}
+
+.country {
+    width: 370px;
+    border: 1px solid red;
+    float: left;
+}
+
+.circle {
+    margin: 10px;
+}
+
+.list {
+    width:24.5%;  
+    border: 1px solid blue;
+    float:left;
+}
+
+#leg {
+    clear:both;
+}
+
+.leg {
+    margin:5px;
+    padding:3px;
+    width:99%;
+    height:20px;
+
+}
+
+#linechart {
+    height: 300px;
+}
+
+
+
+/* OTHERS MIGHT DELETE */
+#sources {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+textpath.labeltext {
+    font-size: 18;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.arc path {
+    stroke: #FFF;
+    stroke-width: 2px;
+    stroke-opacity: 0.5;
+}
+
+.piecontainer {
+    float: left;  
+}
+
+h1{
+    text-align: center;
+}
+
