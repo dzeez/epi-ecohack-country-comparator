@@ -14,10 +14,11 @@ var sdat = new Array();
 var main = d3.select("#maincontainer");
 var countryselection = ["CHN","IND","USA"] ; 
 var url = "";
+var apiServer = "http://192.241.242.155/";
 
 
 // JSON for select Boxes
-d3.json("http://107.170.152.222/country_list.json", function(error, json) {  
+d3.json(apiServer+"country_list.json", function(error, json) {  
     var selecthtml = "";
     $.each(json, function(name, iso) {
         selecthtml +="<option value=\""+iso+"\">"+name+"</option>";
@@ -74,7 +75,7 @@ function drawgraphs(cs) {
     });
     
     // JSON for radars and indicator list
-    d3.json("http://107.170.152.222/radar_chart.json?years[]=2012&"+url, function(error, json) {
+    d3.json(apiServer+"radar_chart.json?years[]=2012&"+url, function(error, json) {
     //d3.json("http://107.170.152.222/radar_chart.json?years[]=2012&iso_codes[]=CHN&iso_codes[]=IND&iso_codes[]=USA&"+url, function(error, json) { //dsd test
         $("#maincontainer").empty(); //dsd THIS seems to be related to the radar graph disappearing issue
         $.each(json[0], function(key, country2) {
@@ -161,7 +162,7 @@ function drawgraphs(cs) {
     
     
     // JSON for line graph
-    d3.json("http://107.170.152.222/line_graph.json?indicator=EH_HealthImpacts&iso_codes[]=CHN&iso_codes[]=IND&iso_codes[]=DEU", function(error, json) { 
+    d3.json(apiServer+"line_graph.json?indicator=EH_HealthImpacts&iso_codes[]=CHN&iso_codes[]=IND&iso_codes[]=DEU", function(error, json) { 
         console.log(json.data);
         //console.log(sinAndCos());
         nv.addGraph(function() {
@@ -221,4 +222,4 @@ function mouseout() {
         .style("opacity", 1);
 }
 
-}) //ends mega meta wrapper function
+})(); //ends mega meta wrapper function
